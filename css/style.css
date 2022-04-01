@@ -11,6 +11,22 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-image: linear-gradient(45deg, #8700a8, #ff52a0);
+ 
+}
+/* gif background */
+.main-container{
+  background-image: url('galaxy.gif');
+  background-size: cover;
+  height: 100vh;
+  padding:  0% 10% 0% 10%;}
+
+.logo{
+width: 206px;
+margin: 50px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 5%;
 }
 
 main {
@@ -26,21 +42,25 @@ header {
   background-color: #222;
   color: #fff;
   padding: 20px 40px;
+  
 }
 
 header h1 {
   margin: 0;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 form {
   padding: 30px 40px;
+  
 }
 
 .form-control {
   margin-bottom: 10px;
   padding-bottom: 20px;
   position: relative;
+  z-index: 2;
 }
 
 .form-control label {
@@ -48,9 +68,15 @@ form {
   margin-bottom: 5px;
 }
 
+.form-control input{
+  position: relative;
+  z-index:2;
+
+}
+
 .form-control input, #gender-types {
   border: 2px solid #e0e0e0;
-  border-radius: 4px;
+  border-radius: 22px;
   font-family: inherit;
   font-size: 14px;
   padding: 10px;
@@ -117,6 +143,8 @@ form button {
   padding: 10px;
   width: 100%;
   margin-top: 20px;
+  position: relative;
+  z-index:2;
 }
 
 form button:hover {
@@ -146,7 +174,6 @@ form button:hover {
   background-color: #f1f1f1;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
 }
 
 /* Links inside the dropdown */
@@ -165,3 +192,91 @@ form button:hover {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+/* --------------cursor styles ------------------ */
+body{
+  /* cursor: url(blob32.gif), auto; */
+  cursor:grab;
+
+}
+audio{
+  color: #8700a8;
+  opacity: 0.3;
+  display:flexbox;
+  justify-self: center;
+  position:absolute;
+  top: 12.8%;
+  left:20.5%;
+  width: 270px;
+  z-index: 2;
+  transform: rotatez(90deg);
+}
+audio:hover{
+  opacity: 0.8;
+}
+#cursor{
+  height:50px;
+  width:50px;
+  background:#8700a8;
+  border-radius:50px;
+  position: absolute;
+  opacity: 0.6;
+  display: none;
+  transition-duration:0.3s;
+  transition-timing-function: ease-out;
+}
+div:hover ~ #cursor{
+  transform: scale(0.5);
+}
+
+#cursor:active{
+  transform: scale(1.5);
+
+}
+
+@media(max-height:750px) {
+
+
+  main {
+    width: 60vh;
+    height: 100%;
+    padding-bottom: 20%;   
+  }
+
+
+  form{
+    padding: 22px;
+  }
+
+
+  .form-control{
+    width: 95%;
+    height: 95%;
+  }
+
+
+  .logo{
+    width: 106px;
+    display:none;
+  }
+
+}
+
+@media(max-width:1222px){
+
+  
+
+audio{
+  display:flexbox;
+  justify-self: center;
+  position:absolute;
+  top: 6.8%;
+  left:2%;
+  width: 170px;
+  z-index: 2;
+  transform: rotatez(90deg);
+}
+
+
+
+}

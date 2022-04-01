@@ -13,11 +13,17 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <main>
-      <header>
-        <h1>Create Account</h1>
-      </header>
-
+    <audio controls autoplay>
+      <source src="audio/VHS Japan III (Vaporwave Mix).mp3" type="audio/ogg">
+    Your browser does not support the audio element.
+    </audio>
+    <div class="main-container">
+      <img src="image/nasa.png" alt="" class="logo">
+      <main>
+        <header>
+          <h1>Create [ NASA ] Account</h1>
+        </header>
+        
       <form id="form" onsubmit ="verifyPassword()">
         <!-- Username -->
         <div class="form-control">
@@ -54,13 +60,22 @@
             <span class="fas fa-check-circle"></span>
             <span class="fas fa-exclamation-circle"></span>
             <small>Error message</small>
-        </div>
-        
-        <!-- Submit button -->
-        <button type="submit">Submit</button>
-      </form>
-    </main>
+          </div>
+          
+          <!-- Submit button -->
+          <button type="submit">Submit</button>
+        </form>
+      </main>
+  </div>
+  
+  <!-- -----------------cursor style------------ -->
+
+  <div id="cursor"></div>
+
+
     <!-- Javascript -->
+
+
     <script src="js/main.js"></script>
   </body>
 </html>
